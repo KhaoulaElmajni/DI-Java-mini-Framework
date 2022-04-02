@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd" >
+<beans>
+    <bean id="job" class="me.khaoula.service.imp.JobServiceImp"></bean>
+    <bean id="personne" class="me.khaoula.service.imp.PersonneServiceImp">
+        <property name="jobService" ref="job"/>
+        <constructor-arg index="0" value="id1"/>
+    </bean>
+</beans>
